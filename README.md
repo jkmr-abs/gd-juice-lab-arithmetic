@@ -1,10 +1,10 @@
 # GD Juice Lab Arithmetic
 
-A Godot 4.6.1 interactive prototype based on the supplied Juice Lab arithmetic storyboard.
+A Godot 4.6.1 interactive prototype based on the supplied Juice Lab arithmetic storyboard. Repository: [jkmr-abs/gd-juice-lab-arithmetic](https://github.com/jkmr-abs/gd-juice-lab-arithmetic).
 
 ## Status
 
-The first image-matching prototype is implemented. The original storyboard is used for the reference-board view and exact panel crops; answer selection moves between question, incorrect-feedback, and correct-feedback states for subtraction, multiplication, and division.
+The first image-matching prototype is implemented and pushed to `main`. The original storyboard is used for the reference-board view and exact panel crops; answer selection moves between question, incorrect-feedback, and correct-feedback states for subtraction, multiplication, and division.
 
 See [`docs/IMPLEMENTATION_PROGRESS.md`](docs/IMPLEMENTATION_PROGRESS.md) for completed milestones and test results, and [`docs/PROJECT_IMPLEMENTATION_PLAN.md`](docs/PROJECT_IMPLEMENTATION_PLAN.md) for scope and known limitations.
 

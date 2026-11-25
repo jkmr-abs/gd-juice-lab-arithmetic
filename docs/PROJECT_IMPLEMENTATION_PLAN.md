@@ -1,6 +1,6 @@
 # GD Juice Lab Arithmetic — Godot Implementation Plan
 
-**Status:** Prototype implemented; final verification and GitHub push in progress
+**Status:** First prototype implemented and pushed to `main`
 **Technology:** Godot 4.6.1
 **Repository:** `jkmr-abs/gd-juice-lab-arithmetic`
 **Design source:** `references/math-juice-lab-arithmetic-levels-sheet.png`
