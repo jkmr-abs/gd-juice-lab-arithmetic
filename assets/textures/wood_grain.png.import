@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7o5qpfwcyypg"
-path="res://.godot/imported/subtraction_question.png-e591c6b9b3a0b81416ee299596d0866f.ctex"
+uid="uid://crh5yat7tvjkt"
+path="res://.godot/imported/wood_grain.png-09cf5c0aaa43bf24800f80af3cdbea39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/panels/subtraction_question.png"
-dest_files=["res://.godot/imported/subtraction_question.png-e591c6b9b3a0b81416ee299596d0866f.ctex"]
+source_file="res://assets/textures/wood_grain.png"
+dest_files=["res://.godot/imported/wood_grain.png-09cf5c0aaa43bf24800f80af3cdbea39.ctex"]
 
 [params]
 

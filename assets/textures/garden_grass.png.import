@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba4aciqy0330o"
-path="res://.godot/imported/division_incorrect.png-a107138ad2775c1ca76a49795f45445d.ctex"
+uid="uid://b5ruvh640w6kt"
+path="res://.godot/imported/garden_grass.png-17a163a44a5dfaa03c5beed39e6d9b93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/panels/division_incorrect.png"
-dest_files=["res://.godot/imported/division_incorrect.png-a107138ad2775c1ca76a49795f45445d.ctex"]
+source_file="res://assets/textures/garden_grass.png"
+dest_files=["res://.godot/imported/garden_grass.png-17a163a44a5dfaa03c5beed39e6d9b93.ctex"]
 
 [params]
 

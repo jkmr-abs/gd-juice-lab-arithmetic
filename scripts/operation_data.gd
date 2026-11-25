@@ -6,48 +6,33 @@ static func all_operations() -> Dictionary:
 	return {
 		"subtraction": {
 			"label": "Subtraction",
+			"equation": "7 − 2 = ?",
+			"story": "Take away two oranges. How many are left?",
 			"choices": [4, 5, 6],
 			"answer": 5,
-			"panels": [
-				"res://assets/panels/subtraction_question.png",
-				"res://assets/panels/subtraction_incorrect.png",
-				"res://assets/panels/subtraction_correct.png"
-			],
-			"hotspots": [
-				[[0.22, 0.72], [0.41, 0.72], [0.62, 0.72]],
-				[[0.24, 0.72], [0.44, 0.72], [0.64, 0.72]],
-				[[0.19, 0.75], [0.40, 0.75], [0.60, 0.75]]
-			]
+			"incorrect_answer": 4,
+			"explanation": "Take 2 away from 7. Five oranges remain.",
+			"success": "7 − 2 = 5! Great work."
 		},
 		"multiplication": {
 			"label": "Multiplication",
+			"equation": "3 × 2 = ?",
+			"story": "Count three baskets with two oranges in each.",
 			"choices": [5, 6, 7],
 			"answer": 6,
-			"panels": [
-				"res://assets/panels/multiplication_question.png",
-				"res://assets/panels/multiplication_incorrect.png",
-				"res://assets/panels/multiplication_correct.png"
-			],
-			"hotspots": [
-				[[0.22, 0.76], [0.44, 0.76], [0.65, 0.76]],
-				[[0.24, 0.76], [0.44, 0.76], [0.64, 0.76]],
-				[[0.19, 0.78], [0.42, 0.78], [0.63, 0.78]]
-			]
+			"incorrect_answer": 5,
+			"explanation": "Three groups of 2 make 6 oranges.",
+			"success": "3 × 2 = 6! Great work."
 		},
 		"division": {
 			"label": "Division",
+			"equation": "6 ÷ 2 = ?",
+			"story": "Share six orange pieces equally between two cups.",
 			"choices": [2, 3, 4],
 			"answer": 3,
-			"panels": [
-				"res://assets/panels/division_question.png",
-				"res://assets/panels/division_incorrect.png",
-				"res://assets/panels/division_correct.png"
-			],
-			"hotspots": [
-				[[0.22, 0.84], [0.44, 0.84], [0.66, 0.84]],
-				[[0.24, 0.82], [0.45, 0.82], [0.65, 0.82]],
-				[[0.24, 0.82], [0.45, 0.82], [0.65, 0.82]]
-			]
+			"incorrect_answer": 2,
+			"explanation": "Share 6 equally into 2 cups. Each cup gets 3.",
+			"success": "6 ÷ 2 = 3! Great work."
 		}
 	}
 

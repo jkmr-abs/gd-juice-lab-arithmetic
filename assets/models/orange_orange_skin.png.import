@@ -2,16 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwudmk60cd0xm"
-path="res://.godot/imported/subtraction_incorrect.png-3238006f0866fafb28dfb9e420777667.ctex"
+uid="uid://m7wqmn1mim5m"
+path="res://.godot/imported/orange_orange_skin.png-95119a0a5ff382db2de559a953ab3e66.ctex"
 metadata={
 "vram_texture": false
+}
+generator_parameters={
+"md5": "6ba62eff29024caade5aee9ebc3dd1ad"
 }
 
 [deps]
 
-source_file="res://assets/panels/subtraction_incorrect.png"
-dest_files=["res://.godot/imported/subtraction_incorrect.png-3238006f0866fafb28dfb9e420777667.ctex"]
+source_file="res://assets/models/orange_orange_skin.png"
+dest_files=["res://.godot/imported/orange_orange_skin.png-95119a0a5ff382db2de559a953ab3e66.ctex"]
 
 [params]
 
@@ -23,7 +26,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

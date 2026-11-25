@@ -1,36 +1,34 @@
 # Implementation Progress — GD Juice Lab Arithmetic
 
-Updated after each major work step. Chat progress updates are provided alongside this log.
+This log distinguishes the initial incorrect image-panel approach from the corrected 3D rebuild. Chat updates are sent after each meaningful milestone.
 
-## Milestones
+## Corrected implementation milestones
 
 | # | Milestone | Status | Result |
 |---|---|---|---|
-| 1 | Inspect GitHub repository, reference files, and Godot environment | Complete | Supplied public repo was empty; Godot 4.6.1 is installed; GitHub SSH authentication succeeds. |
-| 2 | Create repository wiring and Godot project skeleton | Complete | Local `main` branch initialized and connected to the supplied GitHub repo; project config and main scene added. |
-| 3 | Prepare the exact image-panel assets | Complete | Full image copied for the board view; nine question/incorrect/correct panel crops created from the source image. |
-| 4 | Implement operation navigation and answer flow | Complete | Subtraction, multiplication, and division have question, incorrect, and correct states; mouse hotspots and number-key input work. |
-| 5 | Run automated and Godot startup checks | Complete | Arithmetic/state tests pass; headless editor import and headless app startup complete without errors. |
-| 6 | Verify the visible UI and update run/process documents | Complete | GUI checks confirmed the board scales correctly and sample wrong/correct paths work; README and plan updated. |
-| 7 | Commit and push to the supplied GitHub repository | Complete | `ce714b7` pushed to `origin/main`; upstream tracking is configured. |
+| 1 | Acknowledge and remove image-as-gameplay implementation | Complete | Cropped panel gameplay was removed from the active scene. The source image remains only in `references/`. |
+| 2 | Generate actual 3D prop assets | Complete | Blender generated orange, woven basket, glass jar, and glass cup GLB meshes; Godot builds the animated orange-segment meshes; texture tools generate orange peel, wood grain/normal, and garden textures. |
+| 3 | Build Godot 3D scene and object-based answer input | Complete | Node3D scene with camera, sky/light, garden, workbench, orange scientist, 3D answer fruit, jar, and operation demonstrations. Mouse raycasting and number-key fallback are implemented. |
+| 4 | Implement operation-specific feedback and rewards | Complete | Subtraction moves two fruits to the side basket; multiplication shows three groups of two; division distributes pieces into two cups; success raises juice and lights reward stars. |
+| 5 | Automated import, logic, and startup checks | Passed with note | Godot imports the GLBs and logic tests pass. The dummy headless renderer prints two non-fatal `material is null` diagnostics during 3D scene startup; the actual OpenGL GUI run is clean. |
+| 6 | GUI visual and mouse interaction verification | Complete for first 3D slice | GUI mouse tests confirmed wrong/correct transitions for all three operations. Real 3D oranges, baskets, cups, jar, slices, and object animations render; the result is a stylized prototype, not final photoreal production art. |
+| 7 | Update docs, commit, and push the corrected 3D implementation | In progress | Final diff check and automated tests pass; committing the 3D correction now. |
 
-## Verification performed
+## Tests already run
 
-- `godot --headless --path . --editor --quit` — passed; image assets imported.
-- `godot --headless --path . --script res://tests/test_game_logic.gd` — passed for all three answers, nine panel paths, and feedback transitions.
-- `godot --headless --path . --quit-after 3` — passed; project starts and exits without parser/runtime errors.
-- GUI: full reference board fits the viewport; operation selection works; mouse clicks verified on subtraction wrong/correct, multiplication correct, and division correct. Keyboard wrong/correct paths were also verified for multiplication and division.
+- `blender --background --python tools/generate_3d_assets.py` — generated four GLB models successfully (Blender reports an optional Draco-compression library warning; export succeeds without compression).
+- `python3 tools/generate_textures.py` — generated wood and garden textures.
+- `godot --headless --path . --editor --quit` — imports GLB/PNG assets.
+- `godot --headless --path . --script res://tests/test_game_logic.gd` — PASS for Node3D main-scene root, operation answers, feedback transitions, and 4 imported 3D prop resources.
+- `godot --headless --path . --quit-after 5` — exits successfully. The headless dummy renderer prints two non-fatal `material is null` diagnostics; the normal OpenGL GUI run log is clean.
+- GUI: clicked wrong and correct 3D answer fruit in all three operation tabs; transitions and operation-specific feedback appeared.
 
-## Known scope limits
+## Known limitations
 
-- This is a fixed storyboard prototype, not a question generator. It uses the exact provided image panels so the output matches the reference.
-- Each wrong panel illustrates one specific wrong choice (4 for subtraction, 5 for multiplication, 2 for division). Other wrong choices currently lead to the same operation-specific static panel.
-- No sound, dynamic level progression, localization, or GD Math integration is included.
+- Division pieces are procedural extruded Godot meshes, arranged as three pieces per cup; they are clear and visible but still simpler than the reference art.
+- Baskets and glass/liquid are imported real meshes with simple PBR materials; final art polish and a rigged character are not included.
+- The two headless dummy-renderer diagnostics do not occur in the OpenGL GUI run, but are retained here for transparency.
 
-## Update format
+## Current blocker
 
-Each milestone records what changed, what was tested, whether it passed, failures/blockers, and the next task. Failed checks must be marked as failed and explained, never reported as complete.
-
-## Current blockers
-
-None. The implementation and documentation are pushed to the supplied repository.
+No implementation blocker. Final diff review, commit, and push remain.

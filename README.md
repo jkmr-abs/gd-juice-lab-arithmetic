@@ -1,40 +1,49 @@
 # GD Juice Lab Arithmetic
 
-A Godot 4.6.1 interactive prototype based on the supplied Juice Lab arithmetic storyboard. Repository: [jkmr-abs/gd-juice-lab-arithmetic](https://github.com/jkmr-abs/gd-juice-lab-arithmetic).
+Godot 4.6.1 prototype of the Juice Lab arithmetic activity using actual 3D meshes and object interaction. The supplied sheet is a visual reference only; it is not used as a gameplay texture.
 
-## Status
+## Current status
 
-The first image-matching prototype is implemented and pushed to `main`. The original storyboard is used for the reference-board view and exact panel crops; answer selection moves between question, incorrect-feedback, and correct-feedback states for subtraction, multiplication, and division.
+The corrected 3D prototype is implemented and GUI-tested. Subtraction, multiplication, and division are interactive: the player clicks a numbered 3D orange, and the scene demonstrates wrong/correct feedback using actual 3D objects. Final visual polish and team review can continue from this baseline.
 
-See [`docs/IMPLEMENTATION_PROGRESS.md`](docs/IMPLEMENTATION_PROGRESS.md) for completed milestones and test results, and [`docs/PROJECT_IMPLEMENTATION_PLAN.md`](docs/PROJECT_IMPLEMENTATION_PLAN.md) for scope and known limitations.
+- Detailed implementation/design mapping: [`docs/PROJECT_IMPLEMENTATION_PLAN.md`](docs/PROJECT_IMPLEMENTATION_PLAN.md)
+- Step-by-step milestone log: [`docs/IMPLEMENTATION_PROGRESS.md`](docs/IMPLEMENTATION_PROGRESS.md)
+- Source design image and meeting transcripts: `references/`
 
-## Run the game
+## Run
 
-Install Godot 4.6.1, then from this repository folder run:
+Install Godot 4.6.1 and run from the repository root:
 
 ```sh
 godot --path .
 ```
 
-Or open this folder in the Godot editor and press **Run Project**.
-
 ## Controls
 
-- **Board screen:** use the operation buttons or press `1`, `2`, or `3` to start Subtraction, Multiplication, or Division.
-- **Question/incorrect screen:** click an answer fruit or press the matching number key.
-- **Correct screen:** press `Enter` or `Space` to replay the question.
-- Press `Escape` or **← Board** to return to the full reference board.
-- Press `R` or **Replay question** to restart the current operation.
+- Use the top HUD tabs to switch operation.
+- Click one of the 3D numbered orange fruits to answer.
+- Number keys select the answer by choice order as a fallback.
+- `R` or **Restart level** resets the active operation.
 
-## Run checks
+## Checks
 
 ```sh
 godot --headless --path . --editor --quit
 godot --headless --path . --script res://tests/test_game_logic.gd
-godot --headless --path . --quit-after 3
+godot --headless --path . --quit-after 5
 ```
 
-## Source references
+## Regenerate 3D assets
 
-- Design sheet: `references/math-juice-lab-arithmetic-levels-sheet.png`
-- Meeting transcripts: `references/meeting-tamil-transcript.md` and `references/meeting-english-transcript.md`
+```sh
+python3 tools/generate_textures.py
+blender --background --python tools/generate_3d_assets.py
+godot --headless --path . --editor --quit
+```
+
+## Key folders
+
+- `scenes/`, `scripts/` — actual 3D game scene and logic.
+- `assets/models/` — Blender-generated orange, basket, jar, cup, and orange-segment meshes.
+- `assets/textures/` — procedural PBR textures.
+- `references/` — source image/transcripts only; these are not loaded by gameplay.

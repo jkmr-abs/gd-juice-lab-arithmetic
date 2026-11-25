@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhvp6i7leo886"
-path="res://.godot/imported/multiplication_incorrect.png-d8e0eb8a908685f0ecb1846ce0d104d2.ctex"
+uid="uid://bcocobjm3vkwk"
+path="res://.godot/imported/orange_skin.png-2aa23bbe42264359d09f7f035db6b6f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/panels/multiplication_incorrect.png"
-dest_files=["res://.godot/imported/multiplication_incorrect.png-d8e0eb8a908685f0ecb1846ce0d104d2.ctex"]
+source_file="res://assets/textures/orange_skin.png"
+dest_files=["res://.godot/imported/orange_skin.png-2aa23bbe42264359d09f7f035db6b6f2.ctex"]
 
 [params]
 
