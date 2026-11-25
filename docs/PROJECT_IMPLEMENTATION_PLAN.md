@@ -1,6 +1,6 @@
 # GD Juice Lab Arithmetic — Real 3D Godot Implementation
 
-**Status:** Corrected 3D prototype implemented; final automated checks and GitHub push pending
+**Status:** Corrected 3D prototype implemented and pushed to `main`
 **Engine:** Godot 4.6.1
 **Repository:** `jkmr-abs/gd-juice-lab-arithmetic`
 
